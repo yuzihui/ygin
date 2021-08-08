@@ -1,0 +1,25 @@
+[app]
+   name = "ecs"
+   env  = "local"
+   addr = "127.0.0.1"
+   port = 8001
+   debug = true
+[mysql]
+  [mysql.gorm]
+    connmaxlifetime = 60
+    maxidleconn = 60
+    maxopenconn = 10
+  [mysql.db]
+    addr = "127.0.0.1:3306"
+    name = "database"
+    pass = "root"
+    user = "root"
+[redis]
+   [redis.cache]
+     addr = "127.0.0.1:6379"
+     db = "0"
+     maxretries = 3
+     minidleconns = 2
+     pass = ""
+     poolsize = 2
+
